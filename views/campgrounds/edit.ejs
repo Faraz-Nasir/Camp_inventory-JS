@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDIT CampGround</title>
+</head>
+<body>
+    <form action="/campgrounds/<%=campground._id%>?_method=PUT"  method="POST"><!--?_method=PUT overrides the POST method sepcified so that we can recieve the information as put method specified in backend-->
+        
+        <label for="title">Title</label>
+        <input type="text" id="title" name="campground[title]" value="<%=campground.title%>">
+        <br>
+        <label for="location" >Location</label>
+        <input type="text" id="location" name="campground[location]" value="<%=campground.location%>">
+        <br>
+        <button>SUBMIT</button>
+    </form>
+    
+</body>
+</html>
